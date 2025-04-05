@@ -10,7 +10,7 @@ export const createHabit = async(req,res) => {
 
     try {
         await newHabit.save()
-        return res.status(201).json({success:true,message:"Product created successfully",data:newHabit})
+        return res.status(201).json({success:true,message:"Product created successfully",habit:newHabit})
     } catch (error) {
         console.log('error: ', error);
         return res.status(500).json("Server Error")
